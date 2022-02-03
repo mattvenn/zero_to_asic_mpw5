@@ -16,9 +16,6 @@
 # Base Configurations. Don't Touch
 # section begin
 
-set ::env(PDK) "sky130A"
-set ::env(STD_CELL_LIBRARY) "sky130_fd_sc_hd"
-
 # YOU ARE NOT ALLOWED TO CHANGE ANY VARIABLES DEFINED IN THE FIXED WRAPPER CFGS 
 source $::env(CARAVEL_ROOT)/openlane/user_project_wrapper/fixed_wrapper_cfgs.tcl
 
@@ -32,9 +29,16 @@ set ::env(DESIGN_NAME) user_project_wrapper
 
 # User Configurations
 
+# save some time
+set ::env(RUN_KLAYOUT_XOR) 0
+set ::env(RUN_KLAYOUT_DRC) 0
+# no point in running DRC with magic once openram is in because it will find 3M issues
+set ::env(MAGIC_DRC_USE_GDS) 0
+
+
 ## Source Verilog Files
 set ::env(VERILOG_FILES) "\
-	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
+	$script_dir/../../caravel/verilog/rtl/defines.v \
 	$script_dir/../../verilog/rtl/user_project_wrapper.v"
 
 ## Clock configurations
@@ -53,14 +57,33 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
 
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
-	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/user_proj_example.v"
+	$script_dir/../../caravel/verilog/rtl/defines.v \
+	$script_dir/../../verilog/rtl/user_project_includes.v"
 
-set ::env(EXTRA_LEFS) "\
-	$script_dir/../../lef/user_proj_example.lef"
+set ::env(EXTRA_LEFS) [glob $::env(DESIGN_DIR)/macros/lef/*.lef]
 
-set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../gds/user_proj_example.gds"
+set ::env(EXTRA_GDS_FILES) [glob $::env(DESIGN_DIR)/macros/gds/*.gds]
+
+# these get generated - if a project specifies obstruction in the info.yaml
+source user_project_wrapper/obstruction.tcl
+
+set ::env(GLB_RT_ALLOW_CONGESTION) "1"
+
+#Reduction in the routing capacity of the edges between the cells in the global routing graph. Values range from 0 to 1.
+#1 = most reduction, 0 = least reduction 
+set ::env(GLB_RT_ADJUSTMENT) 0.70
+
+# per layer adjustment
+# 0 -> 1: 1 means don't use the layer                                                        
+# l2 is met1                                                                                 
+set ::env(GLB_RT_L2_ADJUSTMENT) 0.9
+set ::env(GLB_RT_L3_ADJUSTMENT) 0.7
+
+# use 8 cores
+set ::env(ROUTING_CORES) 8
+
+# bail early on problems
+set ::env(ROUTING_OPT_ITERS) 30
 
 set ::env(GLB_RT_MAXLAYER) 5
 
