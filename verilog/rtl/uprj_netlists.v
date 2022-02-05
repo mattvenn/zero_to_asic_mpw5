@@ -20,23 +20,14 @@
 `define USE_POWER_PINS
 
 `include "user_project_wrapper.v"
-//  0 RGB Mixer                      : /home/matt/work/asic-workshop/shuttle4/openlane/designs/wrapped_rgb_mixer
-`include "wrapped_rgb_mixer/wrapper.v"
-`include "wrapped_rgb_mixer/rgb_mixer/src/debounce.v"
-`include "wrapped_rgb_mixer/rgb_mixer/src/encoder.v"
-`include "wrapped_rgb_mixer/rgb_mixer/src/pwm.v"
-`include "wrapped_rgb_mixer/rgb_mixer/src/rgb_mixer.v"
-//  1 Frequency counter              : /home/matt/work/asic-workshop/shuttle4/openlane/designs/wrapped_frequency_counter
-`include "wrapped_frequency_counter/wrapper.v"
-`include "wrapped_frequency_counter/frequency_counter/src/edge_detect.v"
-`include "wrapped_frequency_counter/frequency_counter/src/frequency_counter.v"
-`include "wrapped_frequency_counter/frequency_counter/src/seven_segment.v"
-//  2 VGA Clock                      : /home/matt/work/asic-workshop/shuttle4/openlane/designs/wrapped_vga_clock
-`include "wrapped_vga_clock/wrapper.v"
-`include "wrapped_vga_clock/vga_clock/rtl/button_pulse.v"
-`include "wrapped_vga_clock/vga_clock/rtl/digit.v"
-`include "wrapped_vga_clock/vga_clock/rtl/fontROM.v"
-`include "wrapped_vga_clock/vga_clock/rtl/top.v"
-`include "wrapped_vga_clock/vga_clock/rtl/vga_clock.v"
-`include "wrapped_vga_clock/vga_clock/rtl/VgaSyncGen.v"
+//  0 Function generator             : /home/matt/work/asic-workshop/shuttle4/openlane/designs/wrapped_function_generator
+`include "wrapped_function_generator/wrapper.v"
+`include "wrapped_function_generator/function_generator/src/generator.v"
+// shared Bridge                     : /home/matt/work/asic-workshop/shuttle4/openlane/designs/wb_bridge
+// shared Wrapper                    : /home/matt/work/asic-workshop/shuttle4/openlane/designs/wb_openram_wrapper
+// shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle4/openlane/designs/openram_z2a
+`include "wb_bridge/src/wb_bridge_2way.v"
+`include "wb_openram_wrapper/src/wb_port_control.v"
+`include "wb_openram_wrapper/src/wb_openram_wrapper.v"
+`include "openram_z2a/src/sky130_sram_1kbyte_1rw1r_32x256_8.v"
 
