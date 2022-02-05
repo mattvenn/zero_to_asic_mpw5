@@ -33,7 +33,7 @@ set ::env(DESIGN_NAME) user_project_wrapper
 set ::env(RUN_KLAYOUT_XOR) 0
 set ::env(RUN_KLAYOUT_DRC) 0
 # no point in running DRC with magic once openram is in because it will find 3M issues
-set ::env(MAGIC_DRC_USE_GDS) 0
+set ::env(MAGIC_DRC_USE_GDS) 1
 
 
 ## Source Verilog Files
