@@ -1,113 +1,29 @@
-# Caravel User Project
+# Zero to ASIC Course MPW4
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![UPRJ_CI](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml) [![Caravel Build](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml)
+This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
 
-| :exclamation: Important Note            |
-|-----------------------------------------|
+This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) 
 
-## Please fill in your project documentation in this README.md file 
+    # clone all repos, and include support for shared OpenRAM
+    ./multi_tool.py --clone-repos --clone-shared-repos --create-openlane-config --copy-gds --copy-project --openram
 
-Refer to [README](docs/source/quickstart.rst) for a quick start of how to use caravel_user_project
+    # run all the tests
+    ./multi_tool.py --test-all --force-delete
 
-Refer to [README](docs/source/index.rst) for this sample project documentation. 
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
+    # build user project wrapper submission
+    cd $CARAVEL_ROOT; make user_project_wrapper
+
+    # create docs
+    ./multi_tool.py --generate-doc --annotate-image
+
+![multi macro](pics/multi_macro_annotated.png)
+
+## Function generator
+
+* Author: Matt Venn
+* Github: https://github.com/mattvenn/wrapped_function_generator
+* commit: 0d95d94d816685ab9eea70fbbfb2425a8b91c27e
+* Description: arbitary function generator, using shared RAM as the output data
+
+![Function generator](pics/function_generator.png)
+

@@ -32,6 +32,12 @@ set ::env(DESIGN_NAME) user_project_wrapper
 
 # User Configurations
 
+# save some time
+set ::env(RUN_KLAYOUT_XOR) 0
+set ::env(RUN_KLAYOUT_DRC) 0
+# no point in running DRC with magic once openram is in because it will find 3M issues
+set ::env(MAGIC_DRC_USE_GDS) 0
+
 ## Source Verilog Files
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
@@ -54,16 +60,31 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/user_proj_example.v"
+	$script_dir/../../verilog/rtl/user_project_includes.v"
 
 set ::env(EXTRA_LEFS) "\
-	$script_dir/../../lef/user_proj_example.lef"
+	$script_dir/../../lef/sky130_sram_1kbyte_1rw1r_32x256_8.lef \
+	$script_dir/../../lef/wb_bridge_2way.lef \
+	$script_dir/../../lef/wb_openram_wrapper.lef \
+	$script_dir/../../lef/wrapped_function_generator.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../gds/user_proj_example.gds"
+	$script_dir/../../gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds \
+	$script_dir/../../gds/wb_bridge_2way.gds \
+	$script_dir/../../gds/wb_openram_wrapper.gds \
+	$script_dir/../../gds/wrapped_function_generator.gds"
+
+# use 8 cores
+set ::env(ROUTING_CORES) 8
+
+# bail early on problems
+set ::env(DRT_OPT_ITERS) 30
 
 # set ::env(GLB_RT_MAXLAYER) 5
 set ::env(RT_MAX_LAYER) {met4}
+
+# these get generated - if a project specifies obstruction in the info.yaml
+source user_project_wrapper/obstruction.tcl
 
 # disable pdn check nodes becuase it hangs with multiple power domains.
 # any issue with pdn connections will be flagged with LVS so it is not a critical check.
