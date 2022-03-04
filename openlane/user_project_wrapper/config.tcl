@@ -40,7 +40,7 @@ set ::env(MAGIC_DRC_USE_GDS) 0
 
 ## Source Verilog Files
 set ::env(VERILOG_FILES) "\
-	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
+    $script_dir/../../caravel/verilog/rtl/defines.v \
 	$script_dir/../../verilog/rtl/user_project_wrapper.v"
 
 ## Clock configurations
@@ -59,20 +59,27 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
 
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
-	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
+    $script_dir/../../caravel/verilog/rtl/defines.v \
 	$script_dir/../../verilog/rtl/user_project_includes.v"
 
-set ::env(EXTRA_LEFS) "\
-	$script_dir/../../lef/sky130_sram_1kbyte_1rw1r_32x256_8.lef \
-	$script_dir/../../lef/wb_bridge_2way.lef \
-	$script_dir/../../lef/wb_openram_wrapper.lef \
-	$script_dir/../../lef/wrapped_function_generator.lef"
+### user projects gds and lef files
+set ::env(EXTRA_LEFS) [glob $::env(DESIGN_DIR)/macros/lef/*.lef]
+set ::env(EXTRA_GDS_FILES) [glob $::env(DESIGN_DIR)/macros/gds/*.gds]
 
-set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds \
-	$script_dir/../../gds/wb_bridge_2way.gds \
-	$script_dir/../../gds/wb_openram_wrapper.gds \
-	$script_dir/../../gds/wrapped_function_generator.gds"
+# these get generated - if a project specifies obstruction in the info.yaml
+source user_project_wrapper/obstruction.tcl
+
+set ::env(GLB_RT_ALLOW_CONGESTION) "1"
+
+#Reduction in the routing capacity of the edges between the cells in the global routing graph. Values range from 0 to 1.
+#1 = most reduction, 0 = least reduction 
+set ::env(GLB_RT_ADJUSTMENT) 0.70
+
+# per layer adjustment
+# 0 -> 1: 1 means don't use the layer                                                        
+# l2 is met1                                                                                 
+set ::env(GLB_RT_L2_ADJUSTMENT) 0.9
+set ::env(GLB_RT_L3_ADJUSTMENT) 0.7
 
 # use 8 cores
 set ::env(ROUTING_CORES) 8
@@ -82,9 +89,6 @@ set ::env(DRT_OPT_ITERS) 30
 
 # set ::env(GLB_RT_MAXLAYER) 5
 set ::env(RT_MAX_LAYER) {met4}
-
-# these get generated - if a project specifies obstruction in the info.yaml
-source user_project_wrapper/obstruction.tcl
 
 # disable pdn check nodes becuase it hangs with multiple power domains.
 # any issue with pdn connections will be flagged with LVS so it is not a critical check.
