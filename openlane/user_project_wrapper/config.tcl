@@ -37,6 +37,8 @@ set ::env(RUN_KLAYOUT_XOR) 0
 set ::env(RUN_KLAYOUT_DRC) 0
 # no point in running DRC with magic once openram is in because it will find 3M issues
 set ::env(MAGIC_DRC_USE_GDS) 0
+set ::env(RUN_MAGIC_DRC) 0
+set ::env(QUIT_ON_MAGIC_DRC) 0
 
 ## Source Verilog Files
 set ::env(VERILOG_FILES) "\
@@ -63,8 +65,8 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
 	$script_dir/../../verilog/rtl/user_project_includes.v"
 
 ### user projects gds and lef files
-set ::env(EXTRA_LEFS) [glob $::env(DESIGN_DIR)/macros/lef/*.lef]
-set ::env(EXTRA_GDS_FILES) [glob $::env(DESIGN_DIR)/macros/gds/*.gds]
+source user_project_wrapper/extra_lef_gds.tcl
+
 
 # these get generated - if a project specifies obstruction in the info.yaml
 source user_project_wrapper/obstruction.tcl

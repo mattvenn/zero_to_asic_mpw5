@@ -3,6 +3,25 @@
 //  0 Function generator             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_function_generator
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_function_generator/wrapper.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_function_generator/function_generator/src/generator.v
+//  1 VGA Clock                      : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_vga_clock
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_vga_clock/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_vga_clock/vga_clock/rtl/button_pulse.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_vga_clock/vga_clock/rtl/digit.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_vga_clock/vga_clock/rtl/fontROM.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_vga_clock/vga_clock/rtl/top.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_vga_clock/vga_clock/rtl/vga_clock.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_vga_clock/vga_clock/rtl/VgaSyncGen.v
+//  2 Frequency counter              : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_frequency_counter
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_frequency_counter/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_frequency_counter/frequency_counter/src/edge_detect.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_frequency_counter/frequency_counter/src/frequency_counter.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_frequency_counter/frequency_counter/src/seven_segment.v
+//  3 RGB Mixer                      : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_rgb_mixer
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_rgb_mixer/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_rgb_mixer/rgb_mixer/src/debounce.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_rgb_mixer/rgb_mixer/src/encoder.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_rgb_mixer/rgb_mixer/src/pwm.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_rgb_mixer/rgb_mixer/src/rgb_mixer.v
 // shared Bridge                     : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_bridge
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/openram_z2a
