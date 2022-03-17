@@ -22,6 +22,22 @@
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_rgb_mixer/rgb_mixer/src/encoder.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_rgb_mixer/rgb_mixer/src/pwm.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_rgb_mixer/rgb_mixer/src/rgb_mixer.v
+// 11 Hack soc                       : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_hack_soc
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/wrapped_hack_soc_dffram.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/dmux8way.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/hack_alu.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/hack_clock.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/hack_cpu.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/hack_soc.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/pc.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/register.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/spi_sram_encoder.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/video_signal_generator_640x480.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/spi_video_ram_2.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/vram_write_fifo.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/rom_stream_loader.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/boot_logo.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/DFFRF_2R1W.v
 // shared Bridge                     : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_bridge
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/openram_z2a

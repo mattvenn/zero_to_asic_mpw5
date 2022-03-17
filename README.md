@@ -3,7 +3,7 @@
 
 This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
 
-This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [22354619088f952543fa3fd62f8da4fa29b5e751](https://github.com/mattvenn/multi_project_tools/commit/22354619088f952543fa3fd62f8da4fa29b5e751).
+This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [0f7c5722fc47afad85f750f5e1e44256c9e6bb45](https://github.com/mattvenn/multi_project_tools/commit/0f7c5722fc47afad85f750f5e1e44256c9e6bb45).
 
     # clone all repos, and include support for shared OpenRAM
     ./multi_tool.py --clone-repos --clone-shared-repos --create-openlane-config --copy-gds --copy-project --openram
@@ -56,4 +56,13 @@ This submission was configured and built by the [multi project tools](https://gi
 * Description: reads 3 encoders and generates PWM signals to drive an RGB LED
 
 ![RGB Mixer](pics/schematic.jpg)
+
+## Hack soc
+
+* Author: Maximo Balestrini
+* Github: https://github.com/mbalestrini/wrapped_hack_soc
+* commit: 4e008304a518ba4d5b4251b9fedd00fc0529ae43
+* Description: Hardware implementation of the Hack Computer from the Nand to Tetris courses
+
+![Hack soc](pics/project.jpg)
 
