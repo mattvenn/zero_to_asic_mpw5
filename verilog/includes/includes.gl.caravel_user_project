@@ -1,3 +1,10 @@
-# Caravel user project includes	     
+# Caravel user project includes
 -v $(USER_PROJECT_VERILOG)/gl/user_project_wrapper.v	     
--v $(USER_PROJECT_VERILOG)/gl/user_proj_example.v     
+-v $(USER_PROJECT_VERILOG)/gl/wb_bridge_2way.lvs.powered.v
+-v $(USER_PROJECT_VERILOG)/gl/wb_openram_wrapper.lvs.powered.v
+-v $(USER_PROJECT_VERILOG)/gl/wrapped_frequency_counter.v
+-v $(USER_PROJECT_VERILOG)/gl/wrapped_function_generator.v
+-v $(USER_PROJECT_VERILOG)/gl/wrapped_hack_soc_dffram.v
+-v $(USER_PROJECT_VERILOG)/gl/wrapped_rgb_mixer.v
+-v $(USER_PROJECT_VERILOG)/gl/wrapped_vga_clock.v
+

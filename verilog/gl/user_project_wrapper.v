@@ -260,6 +260,7 @@ module user_project_wrapper (user_clock2,
  wire rambus_wb_we_o;
  wire wbs_oram_ack_o;
  wire \wbs_oram_adr_i[0] ;
+ wire \wbs_oram_adr_i[10] ;
  wire \wbs_oram_adr_i[1] ;
  wire \wbs_oram_adr_i[2] ;
  wire \wbs_oram_adr_i[3] ;
@@ -684,7 +685,8 @@ module user_project_wrapper (user_clock2,
     \wbs_uprj_sel_i[2] ,
     \wbs_uprj_sel_i[1] ,
     \wbs_uprj_sel_i[0] }),
-    .wbm_b_adr_o({\wbs_oram_adr_i[9] ,
+    .wbm_b_adr_o({\wbs_oram_adr_i[10] ,
+    \wbs_oram_adr_i[9] ,
     \wbs_oram_adr_i[8] ,
     \wbs_oram_adr_i[7] ,
     \wbs_oram_adr_i[6] ,
@@ -998,7 +1000,8 @@ module user_project_wrapper (user_clock2,
     \oram_wmask0[2] ,
     \oram_wmask0[1] ,
     \oram_wmask0[0] }),
-    .wbs_a_adr_i({\wbs_oram_adr_i[9] ,
+    .wbs_a_adr_i({\wbs_oram_adr_i[10] ,
+    \wbs_oram_adr_i[9] ,
     \wbs_oram_adr_i[8] ,
     \wbs_oram_adr_i[7] ,
     \wbs_oram_adr_i[6] ,

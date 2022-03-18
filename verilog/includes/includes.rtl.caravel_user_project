@@ -42,6 +42,7 @@
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/openram_z2a
 -v $(USER_PROJECT_VERILOG)/rtl/wb_bridge/src/wb_bridge_2way.v
+-v $(USER_PROJECT_VERILOG)/rtl/wb_openram_wrapper/src/register_rw.v
 -v $(USER_PROJECT_VERILOG)/rtl/wb_openram_wrapper/src/wb_port_control.v
 -v $(USER_PROJECT_VERILOG)/rtl/wb_openram_wrapper/src/wb_openram_wrapper.v
 -v $(USER_PROJECT_VERILOG)/rtl/openram_z2a/src/sky130_sram_1kbyte_1rw1r_32x256_8.v

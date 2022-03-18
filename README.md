@@ -3,7 +3,7 @@
 
 This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
 
-This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [0f7c5722fc47afad85f750f5e1e44256c9e6bb45](https://github.com/mattvenn/multi_project_tools/commit/0f7c5722fc47afad85f750f5e1e44256c9e6bb45).
+This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [e936b9cae8ef3f98a938902fd391758a5c1a6736](https://github.com/mattvenn/multi_project_tools/commit/e936b9cae8ef3f98a938902fd391758a5c1a6736).
 
     # clone all repos, and include support for shared OpenRAM
     ./multi_tool.py --clone-repos --clone-shared-repos --create-openlane-config --copy-gds --copy-project --openram
@@ -25,7 +25,7 @@ This submission was configured and built by the [multi project tools](https://gi
 
 * Author: Matt Venn
 * Github: https://github.com/mattvenn/wrapped_function_generator
-* commit: d191bae27a4560e589c3dff7d524cf5e9425be3c
+* commit: 9e73784d43a91d70cb1a7c9c5d42037f49ed9e67
 * Description: arbitary function generator, using shared RAM as the output data
 
 ![Function generator](pics/function_generator.png)
@@ -61,7 +61,7 @@ This submission was configured and built by the [multi project tools](https://gi
 
 * Author: Maximo Balestrini
 * Github: https://github.com/mbalestrini/wrapped_hack_soc
-* commit: 4e008304a518ba4d5b4251b9fedd00fc0529ae43
+* commit: 54395c53d52f253bd71b35d0a1c2049c87d31103
 * Description: Hardware implementation of the Hack Computer from the Nand to Tetris courses
 
 ![Hack soc](pics/project.jpg)
