@@ -38,6 +38,25 @@
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/rom_stream_loader.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/boot_logo.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_hack_soc/hack_soc/src/DFFRF_2R1W.v
+// 13 teras                          : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_teras
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/arith_to_s3.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/dspblock_6x6_f400_uid35.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/fifo.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/intmultiplier_f400_uid31.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/l2a.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/leftshifter12_by_max_31_f400_uid38.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/lzocshifter_6_to_6_counting_8_f400_uid18.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/lzocshiftersticky_32_to_7_counting_64_f400_uid22.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/pe_s3.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/rightshiftersticky8_by_max_8_f400_uid24.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/s3fdp.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/scsdpram.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/shiftreg.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/systolicarraykernel.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/systolicarray.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/teras_bridge_mpw5.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/teras.v
 // shared Bridge                     : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_bridge
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/openram_z2a
