@@ -66,3 +66,12 @@ This submission was configured and built by the [multi project tools](https://gi
 
 ![Hack soc](pics/project.jpg)
 
+## teras
+
+* Author: Louis Ledoux AKA Binaryman
+* Github: https://github.com/Bynaryman/wrapped_teras
+* commit: 766588bd8519682347ea15680258cd97004fc377
+* Description: matrix multiply unit with exact accumulators, no intermediate roundings, fused-dot-products, and posit arithmetic
+
+![teras](pics/teras_4x3.png)
+
