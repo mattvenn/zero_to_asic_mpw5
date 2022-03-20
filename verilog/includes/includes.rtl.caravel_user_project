@@ -57,6 +57,9 @@
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/systolicarray.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/teras_bridge_mpw5.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_teras/teras/src/teras.v
+//  7 ALU74181                       : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_alu74181
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_alu74181/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_alu74181/alu74181/src/alu74181.v
 // shared Bridge                     : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_bridge
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/openram_z2a
