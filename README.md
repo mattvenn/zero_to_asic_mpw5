@@ -3,7 +3,7 @@
 
 This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
 
-This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [e936b9cae8ef3f98a938902fd391758a5c1a6736](https://github.com/mattvenn/multi_project_tools/commit/e936b9cae8ef3f98a938902fd391758a5c1a6736).
+This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [bbf3d4692bc84d2b9d88e73f2f29736400eac86a](https://github.com/mattvenn/multi_project_tools/commit/bbf3d4692bc84d2b9d88e73f2f29736400eac86a).
 
     # clone all repos, and include support for shared OpenRAM
     ./multi_tool.py --clone-repos --clone-shared-repos --create-openlane-config --copy-gds --copy-project --openram
@@ -74,4 +74,13 @@ This submission was configured and built by the [multi project tools](https://gi
 * Description: matrix multiply unit with exact accumulators, no intermediate roundings, fused-dot-products, and posit arithmetic
 
 ![teras](pics/teras_4x3.png)
+
+## ALU74181
+
+* Author: Thorsten Knoll
+* Github: https://github.com/ThorKn/wrapped_alu74181
+* commit: 6a6ed9564ab6007f775002d770115a3e0ea2ea80
+* Description: Rebuild of the 4-bit Arithmetic Logic Unit 74181
+
+![ALU74181](pics/alu74181_gds.png)
 
