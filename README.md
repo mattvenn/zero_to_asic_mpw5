@@ -3,7 +3,7 @@
 
 This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
 
-This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [3613e8e6e4381c7df174861f30786a50435ba136](https://github.com/mattvenn/multi_project_tools/commit/3613e8e6e4381c7df174861f30786a50435ba136).
+This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [e1cbd74a4186f8e9f8e0c244b65ed6b3acf64258](https://github.com/mattvenn/multi_project_tools/commit/e1cbd74a4186f8e9f8e0c244b65ed6b3acf64258).
 
     # clone all repos, and include support for shared OpenRAM
     ./multi_tool.py --clone-repos --clone-shared-repos --create-openlane-config --copy-gds --copy-project --openram
@@ -97,7 +97,7 @@ This submission was configured and built by the [multi project tools](https://gi
 
 * Author: Uri Shaked
 * Github: https://github.com/wokwi/wrapped_silife
-* commit: ccaf2765c0daeea0847a21b62f4513f818c536a7
+* commit: 53c45898bd6fc04530bf6e9d17153418db5dd175
 * Description: Game of Life, in Silicon
 
 ![SiLife](pics/silife.png)
@@ -119,4 +119,13 @@ This submission was configured and built by the [multi project tools](https://gi
 * Description: reads HSV values from 3 encoders, convert to them RGB, and generates PWM signals to drive an RGB LED
 
 ![HSV Mixer](pics/schematic.jpg)
+
+## SkullFET
+
+* Author: Uri Shaked
+* Github: https://github.com/wokwi/wrapped_skullfet
+* commit: 927e7275e6ba42f02fec99f5928941eeb985ee29
+* Description: Barebone MOSFET transistors
+
+![SkullFET](pics/skullfet_inverter.png)
 

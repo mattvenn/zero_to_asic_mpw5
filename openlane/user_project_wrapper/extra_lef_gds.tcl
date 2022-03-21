@@ -10,6 +10,7 @@ set ::env(EXTRA_LEFS) "\
 	$script_dir/../../lef/wrapped_silife.lef \
 	$script_dir/../../lef/wrapped_acorn_prng.lef \
 	$script_dir/../../lef/wrapped_hsv_mixer.lef \
+	$script_dir/../../lef/wrapped_skullfet.lef \
 	$script_dir/../../lef/wb_bridge_2way.lef \
 	$script_dir/../../lef/wb_openram_wrapper.lef \
 	$script_dir/../../lef/sky130_sram_1kbyte_1rw1r_32x256_8.lef "
@@ -25,6 +26,7 @@ set ::env(EXTRA_GDS_FILES) "\
 	$script_dir/../../gds/wrapped_silife.gds \
 	$script_dir/../../gds/wrapped_acorn_prng.gds \
 	$script_dir/../../gds/wrapped_hsv_mixer.gds \
+	$script_dir/../../gds/wrapped_skullfet.gds \
 	$script_dir/../../gds/wb_bridge_2way.gds \
 	$script_dir/../../gds/wb_openram_wrapper.gds \
 	$script_dir/../../gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds "

@@ -89,6 +89,9 @@
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/hsv_mixer/src/pwm.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/hsv_mixer/src/hsv_mixer.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/hsv_mixer/src/hsv2rgb.v
+//  6 SkullFET                       : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_skullfet
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_skullfet/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_skullfet/src/skullfet-functional.v
 // shared Bridge                     : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_bridge
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/openram_z2a
