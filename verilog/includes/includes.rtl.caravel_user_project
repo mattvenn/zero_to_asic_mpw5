@@ -60,6 +60,35 @@
 //  7 ALU74181                       : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_alu74181
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_alu74181/wrapper.v
 -v $(USER_PROJECT_VERILOG)/rtl/wrapped_alu74181/alu74181/src/alu74181.v
+//  5 vga demo                       : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped-vgademo-on-fpga
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped-vgademo-on-fpga/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped-vgademo-on-fpga/vgademo-on-fpga/src/sphere.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped-vgademo-on-fpga/vgademo-on-fpga/src/top.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped-vgademo-on-fpga/vgademo-on-fpga/src/vga_core.v
+//  4 SiLife                         : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_silife
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/buf_reg.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/cell.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/grid_32x32.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/grid_loader.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/grid_sync.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/grid_sync_edge.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/grid_trng_loader.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/grid_wishbone.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/spi_master.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/max7219.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/trng.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_silife/silife/src/silife.v
+//  9 wrapped_acorn_prng             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_acorn_prng
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_acorn_prng/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_acorn_prng/acorn_prng/src/acorn_prng.v
+// 10 HSV Mixer                      : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wrapped_hsv_mixer
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/wrapper.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/hsv_mixer/src/debounce.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/hsv_mixer/src/encoder.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/hsv_mixer/src/pwm.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/hsv_mixer/src/hsv_mixer.v
+-v $(USER_PROJECT_VERILOG)/rtl/wrapped_hsv_mixer/hsv_mixer/src/hsv2rgb.v
 // shared Bridge                     : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_bridge
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle5/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle5/openlane/designs/openram_z2a

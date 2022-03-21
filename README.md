@@ -70,7 +70,7 @@ This submission was configured and built by the [multi project tools](https://gi
 
 * Author: Louis Ledoux AKA Binaryman
 * Github: https://github.com/Bynaryman/wrapped_teras
-* commit: 766588bd8519682347ea15680258cd97004fc377
+* commit: c119cb48d76e8a4a62c80f98323efb114553c417
 * Description: matrix multiply unit with exact accumulators, no intermediate roundings, fused-dot-products, and posit arithmetic
 
 ![teras](pics/teras_4x3.png)
@@ -79,8 +79,44 @@ This submission was configured and built by the [multi project tools](https://gi
 
 * Author: Thorsten Knoll
 * Github: https://github.com/ThorKn/wrapped_alu74181
-* commit: 6a6ed9564ab6007f775002d770115a3e0ea2ea80
+* commit: 6e935d2d32acdcc66ab18c5894cb628b6c6b9048
 * Description: Rebuild of the 4-bit Arithmetic Logic Unit 74181
 
 ![ALU74181](pics/alu74181_gds.png)
+
+## vga demo
+
+* Author: Zbigniew Drozd
+* Github: https://github.com/zbigos/wrapped-vgademo-on-fpga
+* commit: 7fb9353f1a9f5120a0bd7907963a1c65919f33c0
+* Description: quick demo displaying three floating blobs
+
+![vga demo](pics/screen.png)
+
+## SiLife
+
+* Author: Uri Shaked
+* Github: https://github.com/wokwi/wrapped_silife
+* commit: ccaf2765c0daeea0847a21b62f4513f818c536a7
+* Description: Game of Life, in Silicon
+
+![SiLife](pics/silife.png)
+
+## wrapped_acorn_prng
+
+* Author: Zhenle Cao
+* Github: https://github.com/ZhenleC/wrapped_acorn_prng
+* commit: 5f7d3e5d0fcc9ffc3845dd7e97f55219ebd112ec
+* Description: ACORN (Additive Congruential Random Number) generator, a pseudo random number generator made for the ZerotoASIC course to be taped out on SkyWater Open Source PDK SKY130 process. Design inspired from: http://acorn.wikramaratna.org/ . Huge shoutout and appreciation to Steven Goldsmith for his invaluable assistance with Caravel. 
+
+![wrapped_acorn_prng](pics/acorn_prng.png)
+
+## HSV Mixer
+
+* Author: @proppy (forked from Matt Venn)
+* Github: https://github.com/proppy/wrapped_hsv_mixer
+* commit: 05ab3cfb40c1d934dceb3fe46740a491d4660f6f
+* Description: reads HSV values from 3 encoders, convert to them RGB, and generates PWM signals to drive an RGB LED
+
+![HSV Mixer](pics/schematic.jpg)
 
