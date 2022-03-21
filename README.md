@@ -3,7 +3,7 @@
 
 This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
 
-This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [bbf3d4692bc84d2b9d88e73f2f29736400eac86a](https://github.com/mattvenn/multi_project_tools/commit/bbf3d4692bc84d2b9d88e73f2f29736400eac86a).
+This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit [3613e8e6e4381c7df174861f30786a50435ba136](https://github.com/mattvenn/multi_project_tools/commit/3613e8e6e4381c7df174861f30786a50435ba136).
 
     # clone all repos, and include support for shared OpenRAM
     ./multi_tool.py --clone-repos --clone-shared-repos --create-openlane-config --copy-gds --copy-project --openram
